@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from contacts.views import contact_list, add_contact, edit_contact
+from accounts.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', contact_list, name='contact_list'),    
     path('add/', add_contact, name='add_contact'),
     path('edit/<id>', edit_contact, name='edit_contact'),
+    path('register', register, name="register"),
 ]
